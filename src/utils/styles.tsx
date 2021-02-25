@@ -21,6 +21,10 @@ export const MenuStyle = styled.div`
   position: fixed;
   align-items: center;
   margin-left: 100px;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const BasePageStyle = styled.div`
