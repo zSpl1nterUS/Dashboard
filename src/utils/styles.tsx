@@ -6,10 +6,31 @@ export const SidebarStyle = styled.div`
   position: fixed;
   overflow: scroll;
   background-color: ${({ theme }) => theme.base.sidebar};
-  color: ${({ theme }) => theme.text.main}
+  color: ${({ theme }) => theme.text.main};
   ::-webkit-scrollbar {
     display: none;
   }
+`;
+
+export const MenuStyle = styled.div`
+  width: 300px;
+  background-color: ${({ theme }) => theme.base.menu};
+  color: ${({ theme }) => theme.text.main};
+  height: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  align-items: center;
+  margin-left: 100px;
+`;
+
+export const BasePageStyle = styled.div`
+  height: 100%;
+  background-color: ${({ theme }) => theme.base.content};
+  color: ${({ theme }) => theme.text.main};
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: 400px;
+  width: calc(100% - 400px);
 `;
 
 export const BaseHeader = styled.header`
@@ -22,6 +43,9 @@ export const BaseHeader = styled.header`
 
 export const SidebarHeader = styled(BaseHeader)`
   justify-content: center;
+`;
+
+export const MenuHeader = styled(BaseHeader)`
 `;
 
 export const IconStyle = styled.div`

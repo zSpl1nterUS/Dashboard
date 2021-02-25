@@ -1,7 +1,8 @@
 import * as React from "react";
+import { BasePageStyle } from "../utils/styles";
 
 export const DashboardPage = () => (
-  <div>
-    <h1>Dashboard Page</h1>
-  </div>
+  <BasePageStyle>
+    <p>DashBoard Page</p>
+  </BasePageStyle>
 );
