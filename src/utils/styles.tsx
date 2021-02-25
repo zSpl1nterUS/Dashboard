@@ -46,6 +46,15 @@ export const SidebarHeader = styled(BaseHeader)`
 `;
 
 export const MenuHeader = styled(BaseHeader)`
+  padding: 25px;
+  position: fixed;
+  z-index: 10;
+  background-color: inherit;
+  width: 100%;
+`;
+
+export const DashboardHeader = styled(BaseHeader)`
+  padding: 25px;
 `;
 
 export const IconStyle = styled.div`
@@ -55,6 +64,12 @@ export const IconStyle = styled.div`
   border-radius: 50px;
 `;
 
+export const GuildIcon = styled(IconStyle)`
+  heigth: 60px;
+  width: 60px;
+  margin: 5px 0px;
+`;
+
 export const SidebarContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -62,8 +77,32 @@ export const SidebarContent = styled.div`
   padding: ${({ theme }) => theme.padding.content};
 `;
 
-export const GuildIcon = styled(IconStyle)`
-  heigth: 60px;
-  width: 60px;
-  margin: 5px 0px;
+export const MenuContent = styled.div`
+  box-sizing: border-box;
+  padidng: ${({ theme }) => theme.padding.content};
+  margin-top: 100px;
+`;
+
+export const MenuCategory = styled.div`
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  :nth-child(2) {
+    margin: 20px 0px;
+  }
+  span {
+    padding: 0px 20px;
+  }
+`;
+
+export const MenuCategoryItem = styled.div`
+  font-size: 22px;
+  font-weight: lighter;
+  padding: 5px 0px;
+  transition: 0.3s;
+  :hover {
+    cursor: pointer;
+    background-color: #42494c;
+    color: #ff8c1a;
+  }
 `;

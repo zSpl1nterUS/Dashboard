@@ -3,3 +3,19 @@ export type Guild = {
   name: string;
   avatar: string;
 };
+
+export type MenuGroup = {
+  name: string;
+  path: string;
+  routes: Route[];
+};
+
+export type Route = {
+  name: string;
+  path: string;
+};
+
+export type MenuItem = {
+  name: string;
+  value: string;
+};

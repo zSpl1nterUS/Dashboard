@@ -15,7 +15,7 @@ export const DarkTheme: Theme = {
     main: "#FFFFFF",
   },
   height: {
-    topContent: "95px",
+    topContent: "100px",
   },
   padding: {
     content: "20px 0px",
