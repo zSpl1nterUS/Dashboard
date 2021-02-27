@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SidebarStyle = styled.div`
   width: 100px;
@@ -113,4 +113,100 @@ export const MenuCategoryItem = styled.div`
 
 export const DashboardContent = styled.div`
   padding: 20px;
+`;
+
+export const DropdownHeader = styled.div`
+  background-color: #21262d;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const DropdownItemContainer = styled.div<any>`
+  max-height: 0px;
+  overflow-y: scroll;
+  opacity: 0;
+  transition: 0.3s;
+  ${(props) =>
+    props.expanded
+      ? css`
+          max-height: 220px;
+          opacity: 1;
+        `
+      : css`
+          max-height: 0;
+          opacity: 0;
+        `}
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #171717;
+    border-radius: 50px;
+  }
+`;
+
+export const DropdownItem = styled.div<any>`
+  background-color: #21262d;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 20px;
+  :hover {
+    background-color: #545d6b;
+    cursor: pointer;
+  }
+  ${(props) =>
+    props.isSelected &&
+    css`
+      background-color: #2e2e2e;
+    `}
+`;
+
+export const DropdownFooter = styled.div`
+  background-color: #21262d;
+  padding: 8px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const Button = styled.button`
+  font-family: "Poppins";
+  padding: 5px 12px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  transition: 0.1s;
+  :hover {
+    cursor: pointer;
+    background-color: #4a4a4a;
+  }
+
+  :active {
+    background-color: #262626;
+  }
+
+  :disabled {
+    background-color: #919191;
+    border: none;
+  }
+`;
+
+export const Input = styled.input`
+  font-family: "Poppins";
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 5px;
+  background-color: inherit;
+  color: white;
 `;

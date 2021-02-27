@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Dropdown } from "../components/Dropdown";
+import { selectMenuItems } from "../utils/constants";
 import { GuildContext } from "../utils/contexts/GuildContext";
 import { GuildStoreContext } from "../utils/contexts/GuildStoreContext";
 import { BasePageStyle, DashboardContent, DashboardHeader } from "../utils/styles";
@@ -23,7 +25,7 @@ export const DashboardPage = (props: any) => {
     <BasePageStyle>
       <DashboardHeader>Dashboard</DashboardHeader>
       <DashboardContent>
-        
+        <Dropdown title="Atualizar Cargo Padrão" items={selectMenuItems}></Dropdown>
       </DashboardContent>
     </BasePageStyle>
   );
