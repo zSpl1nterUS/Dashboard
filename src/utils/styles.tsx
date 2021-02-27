@@ -110,3 +110,7 @@ export const MenuCategoryItem = styled.div`
     color: #ff8c1a;
   }
 `;
+
+export const DashboardContent = styled.div`
+  padding: 20px;
+`;

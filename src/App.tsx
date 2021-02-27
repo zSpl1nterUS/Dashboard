@@ -32,17 +32,7 @@ function App() {
               component={DashboardPage}
             />
             <Route
-              path="/dashboard/:guildId/general/muted"
-              exact={true}
-              component={DashboardPage}
-            />
-            <Route
-              path="/dashboard/:guildId/security/roles"
-              exact={true}
-              component={DashboardPage}
-            />
-            <Route
-              path="/dashboard/:guildId/security/authentication"
+              path="/dashboard/:guildId/general"
               exact={true}
               component={DashboardPage}
             />

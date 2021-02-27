@@ -1,7 +1,7 @@
 import * as React from "react";
 import { GuildContext } from "../utils/contexts/GuildContext";
 import { GuildStoreContext } from "../utils/contexts/GuildStoreContext";
-import { BasePageStyle, DashboardHeader } from "../utils/styles";
+import { BasePageStyle, DashboardContent, DashboardHeader } from "../utils/styles";
 
 export const DashboardPage = (props: any) => {
   const { guildId } = props.match.params;
@@ -22,6 +22,9 @@ export const DashboardPage = (props: any) => {
   return (
     <BasePageStyle>
       <DashboardHeader>Dashboard</DashboardHeader>
+      <DashboardContent>
+        
+      </DashboardContent>
     </BasePageStyle>
   );
 };
